@@ -1,6 +1,6 @@
 ESP8266
 =============
-## bmp280_[thingspeak](https://thingspeak.com/)
+## bmp280_thingspeak
 
 Sends Temperature, humidity, altitude, Pressure, dew point, and wifi signal strength to [Thingspeak](https://thingspeak.com/).  
 Also usefull boilerplate for sending a message through the GET method to a private webserver (like a raspberry pi).
