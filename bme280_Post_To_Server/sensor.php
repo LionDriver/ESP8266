@@ -19,7 +19,7 @@ fwrite($fp, "<li>Pressure: ".$pres." atm</li>\n");
 fwrite($fp, "<li>Altitude: ".$alt." ft</li>\n");
 fwrite($fp, "<li>Dew Point: ".$dew."&#176;F</li>\n");
 fwrite($fp, "<li>Signal Strength: ".$strgth." db</li>\n");
-fwrite($fp, '</ul></body></html>');
+fwrite($fp, '</ul></body><script>setTimeout(function(){window.location.reload(1);}, 5000);</script></html>');
 
 fclose($fp);
 exit();
