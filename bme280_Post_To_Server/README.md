@@ -5,12 +5,12 @@ Sends Temperature, humidity, altitude, Pressure, dew point, and wifi signal stre
 
 ## How to setup the server (raspberry pi or other linux system):
 
-sudo apt-get update && sudo apt-get -y dist-upgrade
-sudo apt-get -y install lighttpd php5-common php5-cgi php5
-sudo lighttpd-enable-mod fastcgi-php
-Copy both sensor.php and debug.html to the /var/www/html directory
-sudo chown -R www-data:www-data /var/www/html
-sudo /etc/init.d/lighttpd force-reload
+* sudo apt-get update && sudo apt-get -y dist-upgrade
+* sudo apt-get -y install lighttpd php5-common php5-cgi php5
+* sudo lighttpd-enable-mod fastcgi-php
+* Copy both sensor.php and debug.html to the /var/www/html directory
+* sudo chown -R www-data:www-data /var/www/html
+* sudo /etc/init.d/lighttpd force-reload
 
 Make sure your www-data user has rights to write to debug.html (chmod a+rx debug.html)
 
