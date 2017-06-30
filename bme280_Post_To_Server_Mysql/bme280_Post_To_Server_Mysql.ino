@@ -39,6 +39,7 @@ const char* password = "XXXXXXXX"; // your Wi-Fi network password
 const char* host = "http://192.168.1.144/sensor.php";  //your server IP and receiving script
 const char* hname = "sensor1"; //Name this sensor
 
+
 void setup() {
     Serial.begin(115200);
     while(!Serial) {} // Wait
