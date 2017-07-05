@@ -23,6 +23,9 @@
 * Gnd (Ground)        ->  Gnd
 * SDA (Serial Data)   ->  D2 (gpio 4) on ESP8266
 * SCL (Serial Clock)  ->  D1 (gpio 5) on ESP8266
+*
+* This script uses deepsleep and requires special wiring:
+* RST (Reset pin)     ->  D0 (GPIO 16) 
 */
 
 #include <BME280I2C.h>
@@ -54,6 +57,8 @@ void setup() {
         delay(500);
     }
     Serial.println("Wifi Connected");
+    Serial.println("Sensor: " + WiFi.hostname());
+    delay(5000);
 }
 
 void loop() {
@@ -79,6 +84,8 @@ void loop() {
            body += String(altitude);
            body += "&dew=";
            body += String(dewPoint);
+           body += "&hname=";
+           body += WiFi.hostname();
     HTTPClient http;
     Serial.print("Temp: " + String(temp));
     Serial.print("°"+ String(metric ? 'C' :'F'));
@@ -104,5 +111,7 @@ void loop() {
         Serial.printf("[HTTP] POST... failed, error: %s\n", http.errorToString(httpCode).c_str());
     }
     http.end();
-    delay(30000);
+    const int sleepTime = 600; //seconds
+    ESP.deepSleep(sleepTime * 1000000);
+    delay(10000);
 }
