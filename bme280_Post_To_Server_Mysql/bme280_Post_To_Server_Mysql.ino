@@ -1,7 +1,7 @@
 /**
 * bme280Post_To_Server.ino
-* esp8266 with bmp280 sensor (atmosphere) with data post upload to webserver.
-* Copyright 2017 SlumberMachine
+* esp8266 with bmp280 sensor (Environment) with data post upload to webserver.
+* Copyright (C) 2017 SlumberMachine
 * BME280 library is Copyright (C) 2016  Tyler Glenn
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -21,8 +21,11 @@
 * -----------------------------
 * Vin (Voltage In)    ->  3.3V
 * Gnd (Ground)        ->  Gnd
-* SDA (Serial Data)   ->  D2 (gpio 4) on ESP8266
-* SCL (Serial Clock)  ->  D1 (gpio 5) on ESP8266
+* SDA (Serial Data)   ->  D2 (gpio 4)
+* SCL (Serial Clock)  ->  D1 (gpio 5)
+*
+* This script uses deepsleep and requires special wiring:
+* RST (Reset pin)     ->  D0 (GPIO 16) 
 */
 
 #include <BME280I2C.h>
@@ -37,7 +40,7 @@ WiFiClient client;
 const char* ssid = "XXXXXXXX"; // your wireless network name (SSID)
 const char* password = "XXXXXXXX"; // your Wi-Fi network password
 const char* host = "http://192.168.1.144/sensor.php";  //your server IP and receiving script
-const char* hname = "sensor1"; //Name this sensor
+const char* hname = "sensor1"; //Name this sensor hostname. This can be used to identify for multi-sensor
 
 
 void setup() {

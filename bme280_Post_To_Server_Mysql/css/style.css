@@ -1,0 +1,229 @@
+body {
+    background: url("../images/background.jpg") repeat;
+    cursor: default;
+}
+
+body.wait, body.wait *{
+    cursor: wait !important;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    cursor: pointer;
+}
+
+select {
+    cursor: pointer;
+}
+
+p.text-muted {
+    float: right;
+    padding-right: 20px;
+}
+
+label.clock {
+    float: right;
+}
+
+.main {
+    padding-bottom: 70px;
+}
+
+#gallery {
+    margin: 5px;
+}
+
+label.hostname {
+    text-transform: uppercase;
+}
+
+div.navbar-header {
+    background: #F2F2F2;
+    border: 2px solid #000000;
+    border-radius: 6px;
+}
+
+footer.footer {
+    background: #F2F2F2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 6px;
+}
+
+img.cputemppic {
+    width: 80%;
+    height: 80%;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input.interval {
+    display: inline-block;
+    float: right;
+}
+
+input.btn {
+    border-color: black;
+    border-width: 1px;
+    padding: 5px;
+    border-radius: 6px;
+    color: #000000;
+    background-color: #a9cee5;
+    margin: 1px;
+}
+
+input#reset {
+    position:relative;
+}
+
+input#snap {
+    font-weight: bold;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+input#deletetar {
+    background-color: #D1192F;
+}
+
+input#delete {
+    background-color: #D1192F;
+}
+
+div.viewport {
+    float: right;
+    background: #F2F2F2;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width:1024px !important;
+    max-height:768px !important;
+}
+
+div.dllink {
+    border: 2px solid #000000;
+    background: #F2F2F2;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    visibility: hidden;
+}
+
+div.camoptions {
+    border: 2px solid #000000;
+    background: #F2F2F2;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.cmdSystem {
+    /*line-height: 1.6;*/
+    border: 2px solid #000000;
+    background: #F2F2F2;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#videoCanvas {
+    width: 640px;
+    height: 480px;
+    max-width: 100%;
+    height: auto;
+}
+
+input.rangetext {
+    border-radius: 6px;
+    border: 1px solid #000000;
+    text-align: center;
+    display: inline-block;
+    background-color: #efeff5;
+}
+
+input[type=range] {
+    width: 80%;
+    padding-right: 5px;
+    background: transparent;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:hover {
+    cursor: pointer;
+    outline: none;
+}
+
+div.onoffswitch {
+    position: relative;
+    width: 60px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 6px;
+}
+
+.onoffswitch-inner {
+    display: block; 
+    width: 200%; 
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 15px; padding: 0; line-height: 15px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 8px;
+    background-color: #34A7C1; color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 8px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    display: block; width: 10px; margin: 2.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 41px;
+    border: 2px solid #999999; border-radius: 6px;
+    transition: all 0.3s ease-in 0s; 
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+ul {
+  list-style-type: none;
+}
