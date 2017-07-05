@@ -2,15 +2,15 @@ ESP8266
 =============
 ## bmp280_thingspeak
 
-Sends temperature, humidity, altitude, pressure, dew point, and wifi signal strength to [Thingspeak](https://thingspeak.com/).  
+Sends temperature, humidity, altitude, pressure, dew point, and wifi signal strength to [Thingspeak](https://thingspeak.com/).  Thingspeak is a website that will read the post data sent to them and provide graphs, it makes an easy way to test out esp communication and if you don't want to spend your own time coding up something you can just use their stuff.
 
 ## bme280_Post_To_Server
 
-Sends temperature, humidity, altitude, pressure, dew point, and wifi signal strength through a POST to a server. See sensor.php for a receiving script example.
+Sends temperature, humidity, altitude, pressure, dew point, and wifi signal strength through a POST to a server. The hostname of the esp8266 is sent also so you can read from multiple sensors.  Also uses the esp deepsleep function which requires wiring the reset pin to gpio 16.  See sensor.php for a receiving script example.
 
 ## bme280_Post_To_Server_Mysql
 
-Sends temperature, humidity, altitude, pressure, dew point, and wifi signal strength through a POST to a server. sensor.php file reads the post and inserts the data into an Mysql database.
+Sends temperature, humidity, altitude, pressure, dew point, and wifi signal strength through a POST to a server. The hostname of the esp8266 is sent so you can read from multiple sensors.  Also uses the esp deepsleep function which requires wiring the reset pin to gpio 16.  sensor.php file reads the post and inserts the data into an Mysql database. Environment.php displays the sensor graphs (under construction).
 
 ## Hardware:
 
