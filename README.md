@@ -5,7 +5,7 @@ ESP8266 Bosch bmp/bme280 environment sensor projects
 
 ![alt text](https://github.com/slumbermachine/ESP8266/blob/master/images/img5.JPG)
 ![alt text](https://github.com/slumbermachine/ESP8266/blob/master/images/img1.JPG)
-
+![alt text](https://github.com/slumbermachine/ESP8266/blob/master/images/img7.png)
 
 Sends temperature, humidity, altitude, pressure, dew point, and wifi signal strength to [Thingspeak](https://thingspeak.com/).  Thingspeak is a website that will read the post data sent to them and provide graphs, it makes an easy way to test out esp communication and if you don't want to spend your own time coding up something you can just use their stuff.
 
