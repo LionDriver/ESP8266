@@ -36,7 +36,7 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password password 23r
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password 23rdqw'
 apt-get -y install mysql-server
 lighttpd-enable-mod fastcgi-php;
-echo '<?php $servername = "localhost"; $username = "monitor"; $password = "23rdqw"; $dbname = "images"; ?>' > db.php
+echo '<?php $servername = "localhost"; $username = "monitor"; $password = "23rdqw"; $dbname = "sensors"; ?>' > db.php
 mv db.php /var/www/html/
 /etc/init.d/lighttpd force-reload
 mysql -u root -p23rdqw -e "CREATE DATABASE sensors";
