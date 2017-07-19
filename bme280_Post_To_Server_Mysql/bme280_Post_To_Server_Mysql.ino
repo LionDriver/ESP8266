@@ -36,7 +36,7 @@ BME280I2C bme;
 bool metric = false;
 WiFiClient client;
 
-// Wi-Fi Settings
+// Configuration settings
 const char* ssid = "XXXXXXXX"; // your wireless network name (SSID)
 const char* password = "XXXXXXXX"; // your Wi-Fi network password
 const char* host = "http://192.168.1.144/sensor.php";  //your server IP and receiving script
@@ -59,20 +59,24 @@ void setup() {
     }
     Serial.println("Wifi Connected");
     Serial.println("Sensor: " + WiFi.hostname());
-    delay(5000);
+    delay(4000);
 }
 
 void loop() {
-    // wait for WiFi connection
+    // Get Signal strength
     long rssi = WiFi.RSSI();
     String strgth = String(rssi);
     Serial.print("Signal Strength: ");
     Serial.println(strgth);
+    
+    // Read sensor
     float temp(NAN), hum(NAN), pres(NAN);
     uint8_t pressureUnit(3);
     bme.read(pres, temp, hum, metric, pressureUnit);
     float altitude = bme.alt(metric);
     float dewPoint = bme.dew(metric);
+    
+    // Create post data line
     String body = "temp=";
            body += String(temp);
            body += "&hum=";
@@ -88,6 +92,8 @@ void loop() {
            body += "&hname=";
            body += WiFi.hostname();
     HTTPClient http;
+    
+    // post data to serial for debug
     Serial.print("Temp: " + String(temp));
     Serial.print("°"+ String(metric ? 'C' :'F'));
     Serial.print("\tHumidity: " + String(hum) + "% RH");
@@ -97,14 +103,16 @@ void loop() {
     Serial.print("\tDew point: " + String(dewPoint));
     Serial.println("°"+ String(metric ? 'C' :'F'));
     Serial.print("[HTTP] begin...\n");
+    
+    // Start http post
     http.begin(host);
     http.addHeader("Content-Type", "application/x-www-form-urlencoded", false, true);
-       
+    
+    // Send Http post    
     Serial.print("[HTTP] Sending POST\n");
-    // start connection and send HTTP header
     int httpCode = http.POST(body);
 
-    // httpCode will be negative on error
+    // Get result, httpCode will be negative on error
     if(httpCode > 0) {
         // HTTP header has been send and Server response header has been handled
         Serial.printf("[HTTP] POST result code: %d\n", httpCode);
@@ -112,6 +120,8 @@ void loop() {
         Serial.printf("[HTTP] POST... failed, error: %s\n", http.errorToString(httpCode).c_str());
     }
     http.end();
+    
+    // Enter Deep Sleep
     const int sleepTime = 600; //seconds
     ESP.deepSleep(sleepTime * 1000000);
     delay(10000);
