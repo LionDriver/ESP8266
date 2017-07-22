@@ -11,7 +11,11 @@ Sends temperature, humidity, altitude, pressure, dew point, and wifi signal stre
 
 ## bme280_Post_To_Server
 
-Sends temperature, humidity, altitude, pressure, dew point, and wifi signal strength through a POST to a server. The hostname of the esp8266 is sent also so you can read from multiple sensors.  Also uses the esp deepsleep function which requires wiring the reset pin to gpio 16.  See sensor.php for a receiving script example.
+Sends temperature, humidity, altitude, pressure, dew point, and wifi signal strength through a POST to a server. The hostname of the esp8266 is sent also so you can read from multiple sensors.  Also uses the esp deepsleep function which requires wiring the reset pin to gpio 16. 
+
+![alt text](https://github.com/slumbermachine/ESP8266/blob/master/images/img8.JPG)
+
+See sensor.php for a receiving script example that you can place on your webserver.
 
 ## bme280_Post_To_Server_Mysql
 
