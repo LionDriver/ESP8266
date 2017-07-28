@@ -37,8 +37,8 @@ bool metric = false;
 WiFiClient client;
 
 // Configuration settings
-const char* ssid = "XXXXXXXXX"; // your wireless network name (SSID)
-const char* password = "XXXXXXXXX"; // your Wi-Fi network password
+const char* ssid = "XXXXXXX"; // your wireless network name (SSID)
+const char* password = "XXXXXXXX"; // your Wi-Fi network password
 const char* host = "http://192.168.1.144/sensor.php";  //your server IP and receiving script
 const char* hname = "Sensor1"; //Name this sensor hostname. This can be used to identify for multi-sensor
 
@@ -59,7 +59,6 @@ void setup() {
     }
     Serial.println("Wifi Connected");
     Serial.println("Sensor: " + WiFi.hostname());
-    delay(1000);
 }
 
 void loop() {

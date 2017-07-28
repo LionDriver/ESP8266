@@ -58,7 +58,6 @@ void setup() {
     }
     Serial.println("Wifi Connected");
     Serial.println("Sensor: " + WiFi.hostname());
-    delay(5000);
 }
 
 void loop() {
