@@ -4,7 +4,7 @@
 # Sets up lighttpd webserver and mysql database for recording in 
 # sensor readings from esp8266 sensors. 
 # MIT License
-# Copyright (c) 2017 SlumberMachine
+# Copyright (c) 2017 LionDriver
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
@@ -46,4 +46,4 @@ mysql -u root -p23rdqw -e "GRANT ALL PRIVILEGES ON sensors.* TO 'monitor'@'local
 mysql -u root -p23rdqw -e "FLUSH PRIVILEGES";
 echo "Please copy the webserver files from the repository this script was found in to /var/www/html/"
 echo "Then be sure to sudo chown -R www-data:www-data /var/www/html"
-echo "Have a nice Flat Earth day!"
+echo "Have a nice day!"
