@@ -3,9 +3,9 @@ ESP8266 Bosch bmp/bme280 environment sensor projects
 
 ## bmp280_thingspeak
 
-![alt text](https://github.com/slumbermachine/ESP8266/blob/master/images/img5.JPG)
-![alt text](https://github.com/slumbermachine/ESP8266/blob/master/images/img1.JPG)
-![alt text](https://github.com/slumbermachine/ESP8266/blob/master/images/img7.png)
+![alt text](https://github.com/LionDriver/ESP8266/blob/master/images/img5.JPG)
+![alt text](https://github.com/LionDriver/ESP8266/blob/master/images/img1.JPG)
+![alt text](https://github.com/LionDriver/ESP8266/blob/master/images/img7.png)
 
 Sends temperature, humidity, altitude, pressure, dew point, and wifi signal strength to [Thingspeak](https://thingspeak.com/).  Thingspeak is a website that will read the post data sent to them and provide graphs, it makes an easy way to test out esp communication and if you don't want to spend your own time coding up something you can just use their stuff.
 
@@ -26,9 +26,9 @@ Sends temperature, humidity, altitude, pressure, dew point, and wifi signal stre
 
 ## Hardware:
 
-![alt text](https://github.com/slumbermachine/ESP8266/blob/master/images/img2.JPG)
-![alt text](https://github.com/slumbermachine/ESP8266/blob/master/images/img3.JPG)
-![alt text](https://github.com/slumbermachine/ESP8266/blob/master/images/img6.JPG)
+![alt text](https://github.com/LionDriver/ESP8266/blob/master/images/img2.JPG)
+![alt text](https://github.com/LionDriver/ESP8266/blob/master/images/img3.JPG)
+![alt text](https://github.com/LionDriver/ESP8266/blob/master/images/img6.JPG)
 
 * Bosch [BME280 or BMP280](https://www.amazon.com/dp/B0118XCKTG/ref=cm_sw_r_tw_dp_x_5feozbVBZTRCQ) with i2c connection
 * esp8266 module [for example](https://www.amazon.com/dp/B01IK9GEQG/ref=cm_sw_r_tw_dp_x_DieozbD29KNYZ)
